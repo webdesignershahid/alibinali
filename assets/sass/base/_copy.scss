@@ -1,0 +1,105 @@
+/*-------------------------------------------------
+    [ ## Others Typography ]
+--------------------------------------------------*/
+p { 
+	font-size: var(--base__font-size);
+	line-height: var(--font__line-height-paragraph); 
+	margin: 0;
+	@include mobile {
+		font-size: 0.93rem;
+	}
+}
+blockquote { 
+	margin: 0 0 1.3em;
+}
+address {
+	margin: 0 0 1.3em;
+}
+dfn {
+	font-size: 1em;
+}
+em {
+	@extend dfn;
+	font-style: italic;
+}
+cite {
+	@extend em;
+}
+i {
+	@extend em;
+}
+[class*='flaticon'] {
+	display: inline-flex;
+	align-items: center
+}
+code {
+	@extend dfn;
+}
+kbd {
+	@extend dfn;
+}
+tt {
+	@extend dfn;
+}
+var {
+	@extend dfn;
+}
+
+abbr {
+	border-bottom: 1px dotted var(--color__black);
+	cursor: help;
+}
+acronym {
+	@extend abbr;
+}
+mark {
+	text-decoration: none;
+}
+ins {
+	@extend mark;
+}
+big {
+	font-size: 125%;
+}
+
+pre {
+    // background: var(--color__bg_light);
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.929em;
+    overflow: auto;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.dropcap {
+	display: block;
+	float: left;
+	margin: 15px 5px 0 0;
+	font-weight: bold;
+	font-size: 60px;
+	color: #ccc;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}

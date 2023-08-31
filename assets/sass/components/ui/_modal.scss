@@ -1,0 +1,155 @@
+.modal-backdrop {
+    background-color: var(--color__white);
+}
+.enquery-form-modal {
+    .modal-content {
+        box-shadow: 0 0 6px 0 rgba(#000, 0.4);
+        border: 0;
+        // padding: 20px 60px;
+        padding: 30px 20px;
+        position: relative;
+
+        @include sm-devices {
+            padding: 30px 30px;
+        }
+        @include lg-devices {
+            padding: 30px 60px;
+        }
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 1;
+    }
+    .modals-header {
+        h1 {
+            font-weight: 400;
+            color: var(--color__blue);
+            line-height: 1;
+            font-size: 28px;
+            @include sm-devices {
+                font-size: 32px;
+            }
+            @include lg-devices {
+                font-size: 42px;
+            }
+        }
+        p {
+            color: var(--color__blue);
+            font-size: 16px;
+            @include lg-devices {
+                font-size: 18px;
+            }
+            @include xl-devices {
+                font-size: 20px;
+            }
+        }
+    }
+    .modal-body {
+        padding: 1.5rem 0 0;
+        @include lg-devices {
+            padding: 1.5rem 0 1rem;
+        }
+    }
+
+    form {
+        input {
+            height: 48px;
+            background-color: rgba(#D2E1F2, 0.66);
+            border: 0;
+            padding: 1rem 1rem;
+            border-radius: 8px;
+            color: var(--color__blue);
+            
+            @include lg-devices {
+                height: 60px;
+                padding: 1rem 1.2rem;
+                border-radius: 12px;
+            }
+            &::placeholder {
+                color: var(--color__blue);
+                font-size: 15px;
+                @include lg-devices {
+                    font-size: 18px;
+                }
+            }
+            &:focus {
+                background-color: rgba(#D2E1F2, 0.66);
+                color: var(--color__blue);
+            }
+            &:-webkit-autofill {
+                box-shadow: 0 0 0px 1000px rgba(#D2E1F2, 0.66) inset;
+                -webkit-box-shadow: 0 0 0px 1000px rgba(#D2E1F2, 0.66) inset;
+                -webkit-text-fill-color: var(--color__blue) !important;
+                background-color: rgba(#D2E1F2, 0.66);
+            }
+            &:-webkit-autofill:focus {
+                box-shadow: 0 0 0px 1000px rgba(#D2E1F2, 0.66) inset;
+                -webkit-box-shadow: 0 0 0px 1000px rgba(#D2E1F2, 0.66) inset;
+                -webkit-text-fill-color: var(--color__blue) !important;
+                background-color: rgba(#D2E1F2, 0.66);
+            }
+        }
+
+        textarea {
+            background-color: rgba(#0056B8, 0.4);
+            border: 0;
+            padding: 1rem 1rem;
+            border-radius: 12px;
+            color: var(--color__blue);
+            
+            @include lg-devices {
+                padding: 1rem 1.2rem;
+                border-radius: 18px;
+            }
+
+            &::placeholder {
+                color: var(--color__blue);
+                font-size: 15px;
+                @include lg-devices {
+                    font-size: 18px;
+                }
+            }
+            &:focus {
+                background-color: rgba(#0056B8, 0.4);
+                color: var(--color__blue);
+            }
+            &:-webkit-autofill {
+                box-shadow: 0 0 0px 1000px rgba(#0056B8, 0.4) inset;
+                -webkit-box-shadow: 0 0 0px 1000px rgba(#0056B8, 0.4) inset;
+                -webkit-text-fill-color: var(--color__blue) !important;
+                background-color: rgba(#0056B8, 0.4);
+            }
+            &:-webkit-autofill:focus {
+                box-shadow: 0 0 0px 1000px rgba(#0056B8, 0.4) inset;
+                -webkit-box-shadow: 0 0 0px 1000px rgba(#0056B8, 0.4) inset;
+                -webkit-text-fill-color: var(--color__blue) !important;
+                background-color: rgba(#0056B8, 0.4);
+            }
+        }
+
+        button {
+            background-color: var(--color__blue);
+            padding: 14px 60px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 12px;
+            margin-top: 10px;
+            @include lg-devices {
+                padding: 16px 84px;
+                font-size: 18px;
+            }
+        }
+        .success-message {
+            color: #DE7C00;
+            font-size: 18px;
+        }
+        .error-message {
+            color: #9F0000;
+            font-size: 18px;
+        }
+    }
+
+}

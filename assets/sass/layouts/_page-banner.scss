@@ -1,0 +1,83 @@
+.page-banner {
+    padding: 80px 0;
+    min-height: 520px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include lg-devices {
+        padding: 110px 0;
+    }
+    @include xl-devices {
+        min-height: 640px;
+    }
+    @include xxl-devices {
+        min-height: 710px;
+    }
+    .hero-title {
+        color: var(--color__white);
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1.1;
+        @include max-sm {
+            text-align: center;
+        }
+
+        @include sm-devices {
+            font-size: 52px;
+        }
+        @include lg-devices {
+            max-width: 300px;
+            font-size: 70px;
+        }
+        @include xl-devices {
+            font-size: 85px;
+            max-width: 400px;
+        }
+        @include xxl-devices {
+            font-size: 105px;
+            max-width: 480px;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0057B7;
+        opacity: 0.85;
+        z-index: -1;
+        mix-blend-mode: overlay;
+    }
+
+    .center-logo {
+        @include width-height(175px, 175px);
+        margin: 0 auto;
+        background-color: rgba(#DE7C00, 0.5);
+        position: absolute;
+        left: 50%;
+        top: calc(50% + 50px);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        @include flex-center;
+        padding: 40px;
+        @include sm-devices {
+            @include width-height(250px, 250px);
+            padding: 50px;
+        }
+        @include lg-devices {
+            top: 50%;
+        }
+        @include xl-devices {
+            @include width-height(300px, 300px);
+        }
+        @include xxl-devices {
+            @include width-height(375px, 375px);
+        }
+    }
+}

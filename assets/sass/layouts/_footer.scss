@@ -1,0 +1,163 @@
+/*--------------------------------------------------------------
+# Footer-block
+--------------------------------------------------------------*/
+.footer-top {
+    padding: 16px 0;
+
+    @include md-devices {
+        padding: 20px 0;
+    }
+    @include xl-devices {
+        padding: 25px 0;
+    }
+
+    ul {
+        gap:  0 5%;
+        @media (min-width: 410px) {
+            gap: 0 8%;
+        }
+        @include md-devices {
+            gap: 0 12%;
+        }
+        li {
+            color: #fff;
+
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                transition: all 0.2s;
+                @include xsm-devices {
+                    font-size: 14px;
+                }
+                @include md-devices {
+                    font-size: 16px;
+                }
+                @include lg-devices {
+                    font-size: 19px;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            img {
+                margin-right: 8px;
+                @include md-devices {
+                    margin-right: 12px;
+                }
+                @include lg-devices {
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+}
+.footer-middle {
+    .swiper-slide {
+        overflow: hidden;
+
+        img {
+            transition: all 0.3s;
+        }
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+.footer-bottom {
+    padding: 60px 0 0;
+
+    .footer-widget {
+        .widget-title {
+            font-size: 24px;
+            font-weight: bold;
+            
+            @include lg-devices {
+                font-size: 30px;
+            }
+        }
+        .links {
+            a {
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-weight: 400;
+                padding: 5px 0;
+                display: inline-block;
+                transition: all 0.2s;
+
+                &:hover {
+                    opacity: 0.8;
+                    padding-left: 5px;
+                }
+
+                @include lg-devices {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        form {
+            max-width: 400px;
+            label {
+                font-size: 16px;
+                margin-top: 5px;
+            }
+            input {
+                border: 2px solid #fff;
+                background-color: transparent;
+                height: 50px;
+                color: #fff;
+                border-radius: 0;
+                margin-bottom: 10px;
+
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+            button {
+                background-color: var(--color__blue);
+                border-radius: 0;
+                padding: 12px 0;
+                font-size: 18px;
+            }
+        }
+    }
+    .copyright {
+        padding: 48px 0 30px;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0 15px;
+            margin-top: 15px;
+            @include md-devices {
+                justify-content: flex-start;
+                margin: 0;
+            }
+        }
+        p {
+            font-size: 16px;
+            color: #E2E2E2;
+            @include max-sm {
+                text-align: center;
+            }
+            @include lg-devices {
+                font-size: 18px;
+            }
+
+            img {
+                width: 40px;
+                @include md-devices {
+                    width: 50px;
+                }
+                @include lg-devices {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}

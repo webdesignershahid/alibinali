@@ -1,0 +1,380 @@
+.hero-banner {
+    padding: 100px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    @include sm-devices {
+        padding: 135px 0 100px;
+    }
+    @include md-devices {
+        padding: 150px 0 100px;
+    }
+    @include xl-devices {
+        padding: 190px 0 100px;
+    }
+
+    h1 {
+        font-size: 38px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        
+        @include xsm-devices {
+            font-size: 42px;
+        }
+        @include sm-devices {
+            font-size: 52px;
+        }
+        @include md-devices {
+            font-size: 60px;
+        }
+        @include lg-devices {
+            max-width: 565px;
+            font-size: 66px;
+        }
+        @include xl-devices {
+            font-size: 76px;
+            max-width: 650px;
+        }
+
+        .stroke {
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+            @include md-devices {
+                -webkit-text-stroke-width: 2px;
+            }
+        }
+    }
+}
+
+.travel-spot {
+    overflow: hidden;
+    .spot-type {
+        margin: 30px 0 30px;
+        text-align: center;
+        
+        @include md-devices {
+            margin: 40px 0 30px;
+        }
+        @include lg-devices {
+            margin: 50px 0 30px;
+        }
+
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 0 20px;
+            @include sm-devices {
+                gap: 0 40px;
+            }
+            @include md-devices {
+                gap: 0 60px;
+            }
+            @include lg-devices {
+                gap: 0 80px;
+            }
+            li {
+                font-size: 14px;
+                font-weight: 400;
+                color: #8F8A91;
+                @include sm-devices {
+                    font-size: 18px;
+                }
+                @include lg-devices {
+                    font-size: 20px;
+                }
+                @include xxl-devices {
+                    font-size: 23px;
+                }
+                .icon {
+                    @include width-height(50px, 50px);
+                    border-radius: 50%;
+                    @include flex-center;
+                    margin: 0 auto 5px;
+                    padding: 10px;
+                    @include sm-devices {
+                        @include width-height(65px, 65px);
+                    }
+                    @include lg-devices {
+                        @include width-height(75px, 75px);
+
+                    }
+                    @include xxl-devices {
+                        @include width-height(84px, 84px);
+
+                    }
+                }
+            }
+        }
+    }
+    .item {
+        position: relative;
+        @include max-md {
+            max-width: 380px;
+            margin: 0 auto;
+        }
+        .thumbnail {
+            overflow: hidden;
+            img {
+                height: 175px;
+                width: 100%;
+                object-fit: cover;
+                transition: all 0.3s;
+
+                @include xxl-devices {
+                    height: 230px;
+                }
+                @include xxxl-devices {
+                    height: 250px;
+                }
+            }
+        }
+        .info {
+            background-color: var(--color__white);
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            .name-location {
+                border-left: 1px dashed #707070;
+                padding-left: 10px;
+                margin-left: 8px;
+                flex-grow: 1;
+                @include xl-devices {
+                    padding-left: 16px;
+                    margin-left: 12px;
+                }
+            }
+            h4 {
+                color: #8F8A91;
+                font-size: 16px;
+                font-weight: 400;
+                display: block;
+                border-bottom: 1px solid #707070;
+                padding-bottom: 7px;
+                
+                @media (min-width: 410px) {
+                    font-size: 18px;
+                }
+                @include lg-devices {
+                    font-size: 20px;
+                }
+                @include xl-devices {
+                    font-size: 22px;                    
+                }
+            }
+            p {
+                padding-top: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: #8F8A91;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: normal;
+                @media (min-width: 410px) {
+                    font-size: 14px; 
+                }
+                @include lg-devices {
+                    font-size: 15px;
+                }
+                @include xl-devices {
+                    font-size: 17px;
+                }
+
+                a {
+                    background-color: #6F6474;
+                    color: var(--color__white);
+                    padding: 4px 20px;
+                    white-space: nowrap;
+                    @media (min-width: 410px) {
+                        padding: 4px 25px;
+                    }
+                    @include xl-devices {
+                        padding: 4px 36px;
+                    }
+                    
+                }
+            }
+
+        }
+        .type-icon {
+            .icon {
+                @include width-height(42px, 42px);
+                border-radius: 50%;
+                @include flex-center;
+                padding: 7px;
+            }
+        }
+
+        &:hover {
+            .thumbnail {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+.travel-spot-review {
+    background-color: rgba(#EF3340, 0.1);
+    margin-top: 30px;
+    padding: 30px 0;
+    @include md-devices {
+        margin-top: 50px;
+    }
+    @include lg-devices {
+        margin-top: 70px;
+    }
+    @include xl-devices {
+        padding: 50px 0;
+    }
+
+    .review-slider {
+        max-width: 1024px;
+
+        @include xxl-devices {
+            max-width: 1200px;
+        }
+    }
+    .item {
+        max-width: 300px;
+        margin: 0 auto;
+        @include sm-devices {
+            max-width: 250px
+        }
+        @include md-devices {
+            max-width: 300px
+        }
+        .thumbnail {
+            @include width-height(270px, 270px);
+            border-radius: 50%;
+            border: 4px solid var(--color__white);
+            overflow: hidden;
+            margin: 0 auto;
+
+            @media screen and (min-width: 576px) and (max-width: 767px) {
+                @include width-height(230px, 230px);
+            }
+        }
+        .text-content {
+            background-color: var(--color__white);
+            text-align: center;
+            padding: 17px 16px;
+            min-height: 250px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 1;
+            
+            @include xl-devices {
+                min-height: 350px;
+            }
+
+            h1 {
+                font-size: 28px;
+                color: #8F8A91;
+                @include sm-devices {
+                    font-size: 24px;
+                }
+                @include lg-devices {
+                    font-size: 28px;
+                }
+                @include xl-devices {
+                    font-size: 32px;
+                }
+                @include xxl-devices {
+                    font-size: 38px;
+                }
+            }
+            h6 {
+                font-weight: 400;
+                color: #8F8A91;
+                font-size: 20px;
+                @include sm-devices {
+                    font-size: 16px;
+                }
+                @include md-devices {
+                    font-size: 18px;
+                }
+                @include lg-devices {
+                    font-size: 20px;
+                }
+                @include xl-devices {
+                    max-width: 200px;
+                    margin: 0 auto;
+                    font-size: 22px;
+
+                }
+            }
+            .line {
+                border-top: 1px dashed #707070;
+                margin: 10px 0;
+            }
+            p {
+                font-size: 15px;
+                line-height: 1.6;
+                color: #8F8A91;
+                @include lg-devices {
+                    font-size: 16px;
+                }
+                @include xl-devices {
+                    font-size: 17px;
+                }
+            }
+        }
+        .client-review {
+            background-color: var(--color__white);
+            padding: 10px;
+            margin-top: 8px;
+
+            .client-info {
+                display: flex;
+                align-items: flex-start;
+                gap: 0 15px;
+
+                h6 {
+                    color: #7C7B7D;
+                    font-weight: 400;
+                    font-size: 18px;
+                    @include sm-devices {
+                        font-size: 16px;
+                    }
+                    @include md-devices {
+                        font-size: 18px;
+                    }
+                    @include  lg-devices {
+                        font-size: 20px;
+                    }
+                }
+                .date  {
+                    font-size: 13px;
+                    color: #7C7B7D;
+                    @include lg-devices {
+                        font-size: 14px;
+                    }
+                }
+                .rating {
+                    margin-left: auto;
+                    font-weight: 600;
+                    background-color: white;
+                    box-shadow: 0 0 7px 0 rgba(#000, 0.12);
+                    padding: 2px 8px;
+                    border-radius: 16px;
+                    white-space: nowrap;
+                }
+            }
+            .review-content {
+                color: #717071;
+                padding: 5px 5px;
+                font-size: 15px;
+                line-height: 1.4;
+
+                @include lg-devices {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
